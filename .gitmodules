@@ -7,6 +7,4 @@
 [submodule "MAVBase"]
 	path = MAVBase
 	url = git@github.com:MarceloJordao01/MAVBase.git
-[submodule "mavcom"]
-	path = mavcom
-	url = git@github.com:MarceloJordao01/mavcom.git
+
