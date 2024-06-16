@@ -49,6 +49,15 @@ RUN tar -xzf /tmp/apache-maven-3.8.6-bin.tar.gz -C /usr/local/maven && \
 RUN tar -xzf /tmp/apache-maven-3.9.2-bin.tar.gz -C /usr/local/maven && \
     ln -s /usr/local/maven/apache-maven-3.9.2/bin/mvn /usr/bin/mvn3.9.2
 
+# Instala o ant
+ENV ANT_VERSION=1.10.14
+RUN wget http://archive.apache.org/dist/ant/binaries/apache-ant-${ANT_VERSION}-bin.tar.gz \
+        && tar xvfvz apache-ant-${ANT_VERSION}-bin.tar.gz -C /opt \
+        && ln -sfn /opt/apache-ant-${ANT_VERSION} /opt/ant \
+        && sh -c 'echo ANT_HOME=/opt/ant >> /etc/environment' \
+        && ln -sfn /opt/ant/bin/ant /usr/bin/ant \
+        && rm apache-ant-${ANT_VERSION}-bin.tar.gz
+
 
 WORKDIR /home
 

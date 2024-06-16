@@ -11,3 +11,6 @@
 [submodule "mavcom"]
 	path = mavcom
 	url = git@github.com:MarceloJordao01/mavcom.git
+[submodule "mavmap"]
+	path = mavmap
+	url = git@github.com:MarceloJordao01/mavmap.git
